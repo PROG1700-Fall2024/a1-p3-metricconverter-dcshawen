@@ -11,6 +11,8 @@ def main():
     print("-" * len(greeting))
 
     # Get the following values from the user: imperial tons, stone, pounds, ounces
+    # As long as validateFloat() returns None, the while loop will never end and the user will be continuously prompted for a float value
+    # Once a float value is entered, while loop ends and program continues
     while (imperialTons := validateFloat(input("\tEnter the number of tons: "))) == None:
         pass
 
