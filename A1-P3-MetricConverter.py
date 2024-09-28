@@ -11,16 +11,16 @@ def main():
     print("-" * len(greeting))
 
     # Get the following values from the user: imperial tons, stone, pounds, ounces
-    while (imperialTons := validateFloat(input("\tEnter the number of tons: "))) == 0:
+    while (imperialTons := validateFloat(input("\tEnter the number of tons: "))) == None:
         pass
 
-    while (stone := validateFloat(input("\tEnter the number of stone: "))) == 0:
+    while (stone := validateFloat(input("\tEnter the number of stone: "))) == None:
         pass
 
-    while (pounds := validateFloat(input("\tEnter the number of pounds: "))) == 0:
+    while (pounds := validateFloat(input("\tEnter the number of pounds: "))) == None:
         pass
 
-    while (ounces := validateFloat(input("\tEnter the number of ounces: "))) == 0:
+    while (ounces := validateFloat(input("\tEnter the number of ounces: "))) == None:
         pass
 
     # Perform imperial to metric calculations
@@ -43,7 +43,7 @@ def validateFloat(inputQuery):
         print("-" * len(errorString))
         print(errorString)
         print("-" * len(errorString))
-        return 0
+        return None
 
 if __name__ == "__main__":
-    main()
+    main() 
